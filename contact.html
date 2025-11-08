@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Swiss Alps Ski Lodge</title>
+		<meta name="author" content="Anisha Duchicela">
+		<meta name="description" content="The contact page for the ski lodge website.">
+
+		<!-- Favicon -->
+        <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
+        <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+
+		<!-- Google Fonts -->
+		<!-- I linked more fonts than I used so I could test them. -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Bonheur+Royale&family=Lato:wght@400;700&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Rock+Salt&display=swap" rel="stylesheet">
+		
+		<!-- CSS Link -->
+		<link rel="stylesheet" href="styles.css">
+	</head>
+	
+	<body>
+
+		<header>
+            <div id="text-nav">
+                <h1><a href="index.html">Swiss Alps Ski Lodge</a></h1>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="#">Accomodations</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+		</header>
+
+		<main>
+			<section id="contact">
+				<h2>Contact Us</h2>
+				<p>Please reach out to us with any questions or concerns. We are happy to help you plan your dream vacation with us!
+                Required fields marked with a *</p>
+                <img src="images/swiss-sunset.jpg" alt="A sunset over snowy mountains with a village hidden among a 
+                forest of trees with a large lake in the foreground.">
+
+                <div id="form">
+                    <form action="https://wp.zybooks.com/form-viewer.php" target="_blank" method="POST">
+                        <div id="left-side">
+                            <div>
+                                <label for="name">Full Name*</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>  
+
+                            <div>
+                                <label for="email">Email*</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+
+                            <div>
+                                <label for="phone">Phone*</label>
+                                <input type="tel" id="phone" name="phone" required>
+                            </div>
+                        </div>
+
+                        <div id="right-side">
+                            <div>
+                                <fieldset>
+                                    <legend>Preferred Method of Contact</legend>
+
+                                    <input type="radio" name="contact-method" value="email" id="email-contact" checked required>
+                                    <label for="email-contact">Email</label>
+
+                                    <input type="radio" name="contact-method" value="phone" id="phone-contact" required>
+                                    <label for="phone-contact">Phone</label>
+                                </fieldset>
+                            </div>   
+
+                            <div>
+                                <label for="comments">Comments*</label>
+                                <textarea id="comments" name="comments" required></textarea>
+                            </div>                      
+                            
+                            <input type="submit" name="submit" id="submit" value="Submit Form">
+                        </div>
+                    </form>
+                </div>
+            </section>
+		</main>
+		
+		<footer>
+			<p>&copy; 2023 - Swiss Alps Ski Lodge</p>
+            <p>This site is for educational purposes only</p>
+		</footer>
+	</body>
+</html>

@@ -1,0 +1,375 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+:root {
+    /* Color Theme */
+    --font: #000000;
+    --white: #FFFFFF;
+    --lavender: #D4D1FC;
+    --sea-glass: #78C7CF;
+    --lt-green: #B8FFAB;
+    --dk-sea-glass: #243F57;
+    --br-transparent: #abfbf2d9;
+    --lt-transparent: #11343cbf;
+    --invalid: #c2045a;
+    --form-focus: #33017e;
+}
+
+/* Global Styles */
+
+body {
+    background: linear-gradient(to top, var(--lt-transparent), var(--lt-transparent)),
+                url('assets/background-tile.png') repeat;
+    background-size: 40px 40px;
+    background-position: center center;
+    background-attachment: fixed;
+    background-color: var(--dk-sea-glass);
+}
+
+header, main, footer {
+    font-family: 'Lato', sans-serif;
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    color: var(--font);
+    line-height: 1.6;
+    height: auto;
+    background-color: var(--br-transparent); 
+}
+
+/* Header */
+
+header {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("images/swiss-valley.jpg");
+    height: 560px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+#text-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 4%;
+}
+
+h1 a {
+    font-family: "Bonheur Royale", cursive;
+    font-size: 8rem;
+    text-decoration: none;
+    color: var(--white);
+}
+
+/* Navigation */
+
+nav {
+    width: 600px;
+    margin: 0 auto;
+    color: var(--sea-glass);
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: auto auto auto;
+    grid-gap: 1rem;
+    text-align: center;
+}
+
+nav li {
+    border: 4px inset var(--sea-glass);
+    border-radius: 60px;
+}
+
+nav a {
+    display: inline-block;
+    font-size: 1.25rem;
+    font-weight: 400;
+    text-align: center;
+    text-decoration: none;
+    font-family: "Playfair", serif;
+    letter-spacing: 1px;
+    color: var(--lt-cream);
+    transition: background-color 0.3s ease, padding 0.3s ease;
+    padding: 1px 20px;
+    background-color: var(--dk-sea-glass);
+    border-radius: 20px;
+}
+
+nav li:hover {
+    border-color: var(--lt-green);
+}
+
+nav a:hover {
+    text-decoration: none;
+    color: var(--lt-green);
+}
+
+nav li:focus-within {
+    border-color: var(--lavender);
+}
+
+nav a:focus {
+    text-decoration: none;
+    color: var(--lavender);
+    padding: 1px 20px;
+    background-color: var(--dk-sea-glass);
+    border-radius: 20px;
+}
+
+/* Main */
+
+main {
+    padding: 60px 0px;
+    background-color: var(--br-transparent);
+    margin: 70px auto 60px;
+}
+
+h2 {
+    font-family: "Playfair", serif;
+    font-size: 3rem;
+    text-align: center;
+}
+
+p {
+    font-size: 1.15rem;
+}
+
+/* index.html Main */
+
+#intro {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+img {
+    margin: 0 auto;
+    border: 4px outset var(--lt-green);
+}
+
+#images {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    margin: 0 30px;
+}
+
+.images-grid {
+    display: grid;
+    grid-template-columns: auto;
+    text-align: center;
+    max-width: 590px;
+    margin: 0 auto;
+}
+
+h3 {
+    font-family: "Playfair", serif;
+    font-size: 1.5rem;
+    margin-top: 15px;
+}
+
+/* contact.html Main */
+
+#contact {
+    text-align: center;
+    margin: 0 auto;
+}
+
+#contact img {
+    margin: 20px auto;
+}
+
+/* Form - I refrenced the CSS code from the "basic form styling" activity we did earlier in the class in CodePen. 
+I liked the radio buttons that were used in the activity so I wanted to try using them here as well but I tried to add my own spin on it. */
+
+form {
+	width: 670px;
+	margin: 0px auto;
+	padding: 16px;
+	color: var(--font);
+	border: 6px outset var(--lt-transparent);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+    justify-content: center;
+    align-items: start;
+}
+
+input, label, textarea{
+	display: inline-block;
+	width: 90%;
+}
+
+label {
+	margin: 0px 0px 4px 16px;
+	font-weight: bold;
+}
+
+input, textarea {
+    padding: 5px;
+	font-size: 1rem;
+	margin-bottom: 20px;
+	border: 4px;
+	box-shadow: inset 0 0 0 1px var(--dk-sea-glass);
+}
+
+input:focus, textarea:focus {
+	outline: 3px solid var(--lt-transparent);
+}
+
+form fieldset {
+    border: 3px double var(--lt-transparent);
+    padding: 10px;
+    width: 275px;
+    margin: 0 auto;
+	display: grid;
+	grid-template-columns: 1fr;
+  	row-gap: 8px;
+}
+
+fieldset > label {
+	margin-left: 10px;
+    margin-bottom: 10px;
+}
+
+legend {
+	font-weight: bold;
+}
+
+#submit {
+	background-color: var(--dk-sea-glass);
+	border: none;
+	color: var(--white);
+  	font-size: 16px;
+  	font-weight: bold;
+    margin: 0 auto;
+    width: 300px;
+    height: 50px;
+}
+
+input:invalid, textarea:invalid {
+	border: 4px solid var(--invalid);
+	box-shadow: -6px 6px 10px var(--font);
+}
+
+input:focus, textarea:focus {
+	outline: 3px solid var(--form-focus);
+}
+
+#submit:focus {
+	outline: 3px solid var(--form-focus);
+}
+
+#submit:hover {
+	box-shadow: -3px 3px 5px var(--lt-green);
+}
+
+input[type="radio"] + label {
+	display: flex;
+	align-items: center;
+}
+
+input[type="radio"] {
+   	appearance: none;
+   	margin: 0;
+	padding: 0;
+	border: none;
+	font-size: 0;
+	border-radius: 0;
+}
+
+input[type="radio"] + label::before {
+   	content: "\00a0";
+	font-size: 2.25em;
+	line-height: 0.65;
+   	border-radius: 50%;
+   	display: inline-block;  
+   	height: 20px;
+   	width: 22px;
+   	text-align: center;
+   	margin-right: 16px;
+   	border: 2px solid var(--lt-transparent);
+   	background-color: var(--lt-transparent);
+	padding-bottom: 2px;
+}
+
+input[type="radio"]:checked + label::before {
+   	content: "\2022";
+   	color: var(--lt-transparent);
+   	background: var(--br-transparent);
+}
+
+input[type="radio"]:focus{
+	outline: none;
+}
+
+input[type="radio"]:focus + label::before {
+   	box-shadow: 0 0 0 2px var(--lt-transparent);
+}
+
+
+/* Footer */
+
+footer {
+    padding: 40px 0;
+    text-align: center;
+    margin: 70px auto 0;
+    background-color: var(--lt-transparent);
+    color: var(--white);
+}
+
+footer p {
+    font-size: 1rem;
+}
